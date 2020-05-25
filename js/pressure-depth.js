@@ -26,10 +26,10 @@ function checkValidDepth() {
 function calculate() {
 	var input = Qty.parse(document.getElementById("depthInput").value);
 
-	var freshwaterDensity = 999.97;
-	var saltwaterDensity = 1024;
+	var freshwaterDensity = 997.0474;
+	var saltwaterDensity = 1023.6;
 	var density;
-	var gravity = 9.81;
+	var gravity = 9.80665;
 	var floatInput;
 	var pressure;
 	var depth;
