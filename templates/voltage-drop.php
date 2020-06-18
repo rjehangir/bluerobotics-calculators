@@ -94,7 +94,7 @@ $input = $_GET['input'] ? $_GET['input'] : "1.0 A";
 
 	<br />
 	<div class="calc-link">
-		<a href="" id="link-a">Link to these results <i class="fa fa-link" aria-hidden="true"></i></a>
+		<a href="javascript: void(0)" id="link-a" onclick="copyResults()">Link to these results <i class="fa fa-link" aria-hidden="true"></i></a>
 	</div>
 	<h3>Output:</h3>
 	<br />

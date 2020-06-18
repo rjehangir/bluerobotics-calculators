@@ -84,9 +84,24 @@ function clearTable() {
 }
 
 function updateLink() {
-	var url = "";
+	document.getElementById("link-a").innerHTML = 'Link to these results <i class="fa fa-link" aria-hidden="true"></i>';
+}
+
+function textToClipboard (text) {
+    var dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
+
+function copyResults() {
+	var url = window.location.origin+window.location.pathname;
 	url += "?";
 	url += "input="+encodeURI(document.getElementById("depthInput").value);
 
-	document.getElementById("link-a").href = url;
+	textToClipboard(url);
+
+	document.getElementById("link-a").innerHTML = 'Copied to clipboard <i class="fa fa-check" aria-hidden="true"></i>';
 }

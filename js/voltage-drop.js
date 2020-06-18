@@ -237,17 +237,32 @@ function clearTable() {
 }
 
 function updateLink() {
-	var url = "";
-	url += "?";
-	url += "gauge="+encodeURI(document.getElementById("gaugeInput").value);
-	url += "&";
-	url += "conductors="+encodeURI(document.getElementById("conductorsInput").value);
-	url += "&";
-	url += "voltage="+encodeURI(document.getElementById("voltageInput").value);
-	url += "&";
-	url += "length="+encodeURI(document.getElementById("distanceInput").value);
-	url += "&";
-	url += "input="+encodeURI(document.getElementById("loadInput").value);
+    document.getElementById("link-a").innerHTML = 'Link to these results <i class="fa fa-link" aria-hidden="true"></i>';
+}
 
-	document.getElementById("link-a").href = url;
+function textToClipboard (text) {
+    var dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
+
+function copyResults() {
+    var url = window.location.origin+window.location.pathname;
+    url += "?";
+    url += "gauge="+encodeURI(document.getElementById("gaugeInput").value);
+    url += "&";
+    url += "conductors="+encodeURI(document.getElementById("conductorsInput").value);
+    url += "&";
+    url += "voltage="+encodeURI(document.getElementById("voltageInput").value);
+    url += "&";
+    url += "length="+encodeURI(document.getElementById("distanceInput").value);
+    url += "&";
+    url += "input="+encodeURI(document.getElementById("loadInput").value);
+
+    textToClipboard(url);
+
+    document.getElementById("link-a").innerHTML = 'Copied to clipboard <i class="fa fa-check" aria-hidden="true"></i>';
 }

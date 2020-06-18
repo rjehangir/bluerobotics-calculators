@@ -11,7 +11,7 @@ $depth = $_GET['input'] ? $_GET['input'] : "100 m";
 
 <div class="well calculator">
 	<div class="calc-link">
-		<a href="#" id="link-a">Link to these results <i class="fa fa-link" aria-hidden="true"></i></a>
+		<a href="javascript: void(0)" id="link-a" onclick="copyResults()">Link to these results <i class="fa fa-link" aria-hidden="true"></i></a>
 	</div>
 	<form onsubmit="return false;">
 		<div class="form-group has-feedback" id="depthInputGroup">

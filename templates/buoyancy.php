@@ -13,7 +13,7 @@ $water = $_GET['water'] ? $_GET['water'] : "fresh";
 
 <div class="well calculator">
 	<div class="calc-link">
-		<a href="" id="link-a">Link to these results <i class="fa fa-link" aria-hidden="true"></i></a>
+		<a href="javascript: void(0)" id="link-a" onclick="copyResults()">Link to these results <i class="fa fa-link" aria-hidden="true"></i></a>
 	</div>
 	<form>
 		<div class="form-group has-feedback" id="volumeInputGroup">
